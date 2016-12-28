@@ -27,7 +27,7 @@ FactoryGirl.define do
 
     factory :company_with_jobs do
       after(:create) do |company|
-        create_list(:job, 10, company: company)
+        create_list(:job_with_comments, 10, company: company)
       end
     end
   
