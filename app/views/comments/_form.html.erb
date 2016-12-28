@@ -1,4 +1,7 @@
-<%= form_for [@job.company, @job, @comment] do |f| %>
-  <%= f.text_area :content %>
-  <%= f.submit "Leave Comment" %>
-<% end %>
+
+  <%= form_for [@job.company, @job, @comment] do |f| %>
+
+      <%= f.text_area :content, class:"form-control" %>
+
+    <%= f.submit "Leave Comment", class: "btn btn-primary" %>
+  <% end %>
