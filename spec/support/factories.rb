@@ -20,6 +20,13 @@ FactoryGirl.define do
     end
   end
 
+  factory :contact do
+    full_name "David Knott"
+    position "Manager"
+    email "david1k1nott@gmail.com"
+    company
+  end
+
   factory :company do
     sequence :name do |n|
       "example_name_" + n.to_s
