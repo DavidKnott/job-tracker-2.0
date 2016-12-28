@@ -1,5 +1,8 @@
 FactoryGirl.define do
 
+  factory :comment do
+    content "This job rocks!"
+  end
 
   factory :job do 
     sequence :title do |n|
@@ -9,6 +12,12 @@ FactoryGirl.define do
     city "Boulder"
     company
     category {FactoryGirl.create(:category)}
+    
+    factory :job_with_comments do
+      after(:create) do |job|
+        create_list(:comment, 10, job: job)
+      end
+    end
   end
 
   factory :company do
