@@ -13,7 +13,9 @@
 
 <p>Company: <%= link_to @job.company.name, company_path(@job.company) %></p>
 </div>
-
-<div class = "show panel default-panel">
 <%= render partial: "comments/form" %>
-</div
+<%= render partial: "comments" %>
+
+
+
+

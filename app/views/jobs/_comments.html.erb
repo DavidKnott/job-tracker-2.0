@@ -1,0 +1,6 @@
+<h2 class="title">Comments</h2>
+<% @job.comments.each do |comment| %>
+  <div class = "show panel default-panel">
+    <p><%= comment.content %></p>
+  </div>
+<% end %>
