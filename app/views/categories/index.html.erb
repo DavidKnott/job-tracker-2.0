@@ -1,0 +1,11 @@
+<h3 class = "title">All Categories</h3>
+
+<% @categories.each do |category| %>
+  <div class = "company_list" >
+    <ul class="one_company panel default-panel">
+      <%= link_to category.title, category_path(category) %><br>
+      <%= link_to "Edit", edit_category_path(category) %>
+      <%= link_to "Delete", category_path(category), method: "delete" %>
+    </ul>
+  </div>
+<% end %>

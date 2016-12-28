@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-describe "User deletes existing company" do
-  scenario "a user can delete a company" do
+describe "When a user visits /companies" do
+  scenario "they can delete a company" do
     company = Company.create(name: "ESPN")
     visit companies_path
 
-    within(".company_#{company.id}") do
+    within(".company_list") do
       click_link "Delete"
     end
 

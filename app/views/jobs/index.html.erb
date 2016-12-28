@@ -1,5 +1,10 @@
-All Jobs for <strong><%= @company.name %></strong>
+<h3 class = "title" >All Jobs for <%= @company.name %></h3>
 
 <% @jobs.each do |job| %>
-  <ul><%= job.title %> at <%= job.company.name %></ul>
+<div class = "company_list">
+  <ul class = "one_company panel default-panel">
+    <%= job.title %> at <%= job.company.name %>
+    <%= link_to "Delete", company_job_path(@company, job), method: "delete"%>
+  </ul>
+</div>
 <% end %>
