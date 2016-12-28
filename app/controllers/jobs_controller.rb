@@ -22,7 +22,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
-    @comment = Comment.new
+    @comment = @job.comments.new
     @comments = Comment.all
   end
 
