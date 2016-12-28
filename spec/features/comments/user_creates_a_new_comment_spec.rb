@@ -11,7 +11,7 @@ describe "When a user visits company job page" do
     click_on "Leave Comment"
     
     expect(current_path).to eq company_job_path(company, job)
-    expect(page).to have_content "This would be a great job!"
+    expect(page).to have_content "You've successfully left a comment!"
   end
 end
 

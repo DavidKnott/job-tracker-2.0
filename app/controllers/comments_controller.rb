@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
 
 
   def create
+    @job = Job.find(params[:job_id])
     @comment = @job.comments.new(comment_params)
     if @comment.save
       flash[:success] = "You've successfully left a comment!"
