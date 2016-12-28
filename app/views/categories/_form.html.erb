@@ -1,12 +1,16 @@
-<%= form_for @category do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<div class = "show panel default-panel">
 
-  <% @jobs.each do |job| %>
-    <%= check_box_tag :job_ids, job.id, false, :name => 'category[job_ids][]', id: "job-#{job.id}" %>
-    <%= job.title%>
-    <br>
+  <%= form_for @category do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class:"form-control" %>
+
+    <% @jobs.each do |job| %>
+    <div class="check_boxes">
+      <%= check_box_tag :job_ids, job.id, false, :name => 'category[job_ids][]', id: "job-#{job.id}" %>
+      <%= job.title%>
+    </div>
+    <% end %>
+
+    <%= f.submit class:"btn btn-primary"%>
   <% end %>
-
-  <%= f.submit %>
-<% end %>
+</div>

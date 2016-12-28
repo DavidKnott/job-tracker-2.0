@@ -6,6 +6,7 @@ JOBS = ["Engineering", "Development", "Dev Ops", "Quality Assurance", "Teacher",
 CITIES = ["Seattle", "Denver", "Portland", "Indianapolis", "Madison", "Orlando", "San Diego", "Austin", "Las Vegas", "Little Rock", "Boise", "Eugene", "Oakland"]
 
 category = Category.create(title:"Development")
+category1 = Category.create(title:"Design")
 
 COMPANIES.each do |name|
   company = Company.create!(name: name)
