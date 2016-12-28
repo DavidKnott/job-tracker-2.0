@@ -3,8 +3,9 @@
 <% @jobs.each do |job| %>
 <div class = "company_list">
   <ul class = "one_company panel default-panel">
-    <%= job.title %> at <%= job.company.name %>
-    <%= link_to "Delete", company_job_path(@company, job), method: "delete"%>
+    <%= link_to job.title, company_job_path(@company, job), :class => "job_name" %><br>
+    <%= link_to "Edit", edit_company_job_path(@company, job) %>
+    <%= link_to "Delete", company_job_path(@company, job), method: "delete" %>
   </ul>
 </div>
 <% end %>

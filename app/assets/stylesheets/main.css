@@ -1,7 +1,28 @@
 body {
   background-image: url("bg-diamond.jpg");
   background-repeat: repeat;
+  padding-top: 70px;
 }
 a {
   color: black;
+}
+
+.show {
+  margin: auto;
+  text-align: center;
+  width: 40%;
+  padding: 15px;
+}
+
+.make_comment {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 15px;
+  width: 50% 
+}
+
+.flash {
+  text-align: center;
 }

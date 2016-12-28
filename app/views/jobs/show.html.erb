@@ -1,3 +1,4 @@
+<div class = "show panel default-panel">
 <p>Title: <%= @job.title %></p>
 <br>
 
@@ -11,5 +12,8 @@
 <br>
 
 <p>Company: <%= link_to @job.company.name, company_path(@job.company) %></p>
+</div>
 
+<div class = "make_comment panel default-panel">
 <%= render partial: "comments/form" %>
+</div
