@@ -32,6 +32,12 @@ FactoryGirl.define do
       "example_name_" + n.to_s
     end
 
+    factory :company_with_contacts do
+      after(:create) do |company|
+        create_list(:contact, 10, company: company)
+      end
+    end
+
     factory :company_with_jobs do
       after(:create) do |company|
         create_list(:job_with_comments, 10, company: company)

@@ -1,0 +1,8 @@
+<h2 class="title">Contacts</h2>
+<% @company.contacts.each do |contact| %>
+  <div class = "show panel default-panel">
+    <p>Name: <%= contact.full_name %></p>
+    <P>Position:<%= contact.position %></p>
+    <p>Email: <%= contact.email %></p>
+  </div>
+<% end %>

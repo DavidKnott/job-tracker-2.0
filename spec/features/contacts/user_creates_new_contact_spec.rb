@@ -12,7 +12,7 @@ describe "When the user vists company page" do
 
     click_on "Add Contact"
 
-    expect(current_path).to eq company_path(company)
+    expect(current_path).to eq company_jobs_path(company)
     expect(page).to have_content("David Knott")
     expect(page).to have_content("david1k1nott@gmail.com")
   end

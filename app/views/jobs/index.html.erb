@@ -1,5 +1,7 @@
 <h3 class = "title" >All Jobs for <%= @company.name %></h3>
 
+<%= render partial: "contacts/form" %>
+<%= render partial: "contacts" %>
 <% @jobs.each do |job| %>
 <div class = "company_list">
   <ul class = "one_company panel default-panel">
