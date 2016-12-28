@@ -11,3 +11,5 @@
 <br>
 
 <p>Company: <%= link_to @job.company.name, company_path(@job.company) %></p>
+
+<%= render partial: "comments/form" %>

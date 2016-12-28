@@ -9,6 +9,9 @@ describe "When a user visits company job page" do
 
     fill_in "comment[content]", :with => "This would be a great job!"
     click_on "Leave Comment"
+    
+    expect(current_path).to eq company_job_path(company, job)
+    expect(page).to have_content "This would be a great job!"
   end
 end
 
